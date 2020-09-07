@@ -10,7 +10,6 @@
     </parent>
     <groupId>com.alphathur</groupId>
     <artifactId>spring-boot-k8s-app</artifactId>
-    <version>1.0</version>
     <name>spring-boot-k8s-app</name>
     <description>Demo project for Spring Boot</description>
 
