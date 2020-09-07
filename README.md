@@ -10,7 +10,7 @@ A project to show how to run springboot application and mysql in kubernetes clus
 ## Setup application
 ### start mysql database
 ```bash
-kubectl apply -f deploy/mysql-py.yaml
+kubectl apply -f deploy/mysql-pv.yaml
 kubectl apply -f deploy/mysql-deployment.yaml
 ```
 
@@ -54,7 +54,7 @@ kubectl delete svc mysql
 kubectl delete svc spring-boot-k8s-app-service
 ```
 ```java
-kubectl delete -f deploy/mysql-pv.yaml
 kubectl delete -f deploy/mysql-deployment.yaml
+kubectl delete -f deploy/mysql-pv.yaml
 kubectl delete -f deploy/spring-boot-deployment.yaml
 ```
