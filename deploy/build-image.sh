@@ -12,9 +12,10 @@ docker push $image
 echo "$image"
 
 cd deploy
-sed -i s#spring-boot-k8s-app:[0-9]*-[0-9]*#$image-name
+sed -i s#spring-boot-k8s-app:[0-9]*-[0-9]*#$image-name# spring-boot-deploymentl.yaml
 #sed -i s#192.168.6.128:5000/spring-boot-k8s-app:[0-9]*-[0-9]*#$image
 #grep "192.168.6.128:5000/spring-boot-k8s-app" spring-boot-deployment.yaml
+#sed -i s#registry:5000/hy-server:[0-9]*-[0-9]*#$image# hy-server-deployment.yaml
 
 cat spring-boot-deployment.yaml
 # kubectl apply -f spring-boot-deployment.yaml
