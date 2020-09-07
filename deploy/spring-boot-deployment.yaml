@@ -36,4 +36,4 @@ spec:
             - name: MYSQL_USERNAME
               value: root
             - name: MYSQL_PASSWORD
-              value: msyql520
+              value: mysql520
