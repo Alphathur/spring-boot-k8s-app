@@ -5,17 +5,15 @@ if [ $# -eq 1 ]; then
     tag=$1
 fi
 image=localhost:5000/spring-boot-k8s-app:$tag
-image-name=spring-boot-k8s-app:$tag
+imagename=spring-boot-k8s-app:$tag
 
 docker build -t $image .
 docker push $image
 echo "$image"
 
-cd deploy
-sed -i s#spring-boot-k8s-app:[0-9]*-[0-9]*#$image-name# spring-boot-deploymentl.yaml
-#sed -i s#192.168.6.128:5000/spring-boot-k8s-app:[0-9]*-[0-9]*#$image
-#grep "192.168.6.128:5000/spring-boot-k8s-app" spring-boot-deployment.yaml
-#sed -i s#registry:5000/hy-server:[0-9]*-[0-9]*#$image# hy-server-deployment.yaml
+echo "$imagename"
+pwd
 
-cat spring-boot-deployment.yaml
-# kubectl apply -f spring-boot-deployment.yaml
+sed -i s#spring-boot-k8s-app:[0-9]*-[0-9]*#$imagename# deploy/spring-boot-deployment.yaml
+
+kubectl apply -f deploy/spring-boot-deployment.yaml
