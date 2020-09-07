@@ -14,6 +14,8 @@ echo "$image"
 echo "$imagename"
 pwd
 
-sed -i s#spring-boot-k8s-app:[0-9]*-[0-9]*#$imagename# deploy/spring-boot-deployment.yaml
+cp deploy/spring-boot-deployment.yaml deploy/spring-boot-deployment-tmp.yaml
 
-kubectl apply -f deploy/spring-boot-deployment.yaml
+sed -i s#spring-boot-k8s-app:[0-9]*-[0-9]*#$imagename# deploy/spring-boot-deployment-tmp.yaml
+
+kubectl apply -f deploy/spring-boot-deployment-tmp.yaml
