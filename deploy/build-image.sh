@@ -1,4 +1,3 @@
-cd ../
 git pull origin master
 mvn clean package -DskipTests
 tag=$(date +"%Y%m%d-%H%M%S")
