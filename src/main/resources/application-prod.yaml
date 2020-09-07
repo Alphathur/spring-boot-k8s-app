@@ -3,4 +3,3 @@ spring:
     url: jdbc:mysql://mysql:3306/demo?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&autoReconnect=true
     username: ${MYSQL_USERNAME}
     password: ${MYSQL_PASSWORD}
-    initialization-mode: always
