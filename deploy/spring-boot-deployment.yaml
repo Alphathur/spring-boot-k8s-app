@@ -1,0 +1,39 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-boot-k8s-app-service
+spec:
+  type: NodePort
+  selector:
+    app: spring-boot-k8s-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      nodePort: 32083
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oauth-pwd-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-k8s-app
+  template:
+    metadata:
+      labels:
+        app: spring-boot-k8s-app
+    spec:
+      containers:
+        - name: spring-boot-k8s-app-controller
+          image: 192.168.6.128:5000/spring-boot-k8s-app:20200907-011935
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MYSQL_PORT
+              value: '3306'
+            - name: MYSQL_USERNAME
+              value: root
+            - name: MYSQL_PASSWORD
+              value: msyql520
