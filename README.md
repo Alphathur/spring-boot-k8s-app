@@ -9,7 +9,8 @@ A project to show how to run springboot application and mysql in kubernetes clus
 - Maven 3.x
 
 ## Setup application
-### clone this project, use your master node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30)
+### download this project
+download or clone this project, use your master node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30)
 ### start mysql database
 ```bash
 kubectl apply -f deploy/mysql-pv.yaml
