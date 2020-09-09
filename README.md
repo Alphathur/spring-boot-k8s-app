@@ -1,5 +1,5 @@
 # Spring-Boot-K8s-App
-A project to show how to run springboot application and mysql in kubernetes cluster
+Run spring boot application and mysql on kubernetes cluster
 
 ## Prerequisite
 - Docker and kubernetes cluster
