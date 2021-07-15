@@ -1,4 +1,4 @@
-FROM  openjdk:8-jdk
+FROM  deepexi/java:v0.0.1
 WORKDIR /opt/
 COPY target/spring-boot-k8s-app.jar /opt/
 EXPOSE 8080
