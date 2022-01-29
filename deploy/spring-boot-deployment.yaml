@@ -34,6 +34,12 @@ spec:
             - name: MYSQL_PORT
               value: '3306'
             - name: MYSQL_USERNAME
-              value: root
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-credentials
+                  key: mysql-username
             - name: MYSQL_PASSWORD
-              value: mysql520
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-credentials
+                  key: mysql-password
