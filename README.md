@@ -10,7 +10,7 @@ Run spring boot application and mysql on kubernetes cluster
 
 ## Setup application
 ### download this project
-download or clone this project, use your master node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30)
+download or clone this project, use your master node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30). and cd to the proejct's root directory
 ### start mysql database
 ```bash
 kubectl apply -f deploy/mysql-pv.yaml
@@ -36,9 +36,11 @@ k8s-master   Ready    master   45h   v1.19.0   192.168.6.128   <none>        Cen
 k8s-node1    Ready    <none>   44h   v1.19.0   192.168.6.131   <none>        CentOS Linux 7 (Core)   3.10.0-957.12.2.el7.x86_64   docker://18.6.1
 k8s-node2    Ready    <none>   44h   v1.19.0   192.168.6.132   <none>        CentOS Linux 7 (Core)   3.10.0-957.12.2.el7.x86_64   docker://18.6.1
 ```
-test your api by `http://{NodeIp}:{NodePort}`
+test your api by `http://{NodeIp}:{NodePort}`, normally you will be able to access the api using any of the nodes IP
 ```bash
 [root@k8s-master Desktop]# curl http://192.168.6.132:32082
+SpringBoot K8s Application
+[root@k8s-master Desktop]# curl http://192.168.6.131:32082
 SpringBoot K8s Application
 ```
 ```bash
