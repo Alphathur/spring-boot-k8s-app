@@ -9,8 +9,8 @@ Run spring boot application and mysql on kubernetes cluster
 - Maven 3.x
 
 ## Setup application
-### Replace your master ip address
-Download or clone the project, Using your master node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30). and cd to the project's root directory
+### Replace your master node ip address
+Download or clone the project, Use your master node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30). and cd to the project's root directory
 ### Create mysql secret to store database configuration
 Note: my root password for mysql is `mysql520` and database user to connect spring application is `root`, all values in the [deploy/mysql-secret.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/mysql-secret.yaml) are required to be base64 encoded, you can print base64 encode values easily from the terminal
 ```bash
