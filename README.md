@@ -11,7 +11,7 @@ Run spring boot application and mysql on kubernetes cluster
 
 ## Setup application
 ### Replace your registry node ip
-Download or clone the project, Use your registry node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30). and cd to the project's root directory
+Download or clone the project, Use your registry node ip to replace `192.168.6.128` in [deploy/spring-boot-deployment.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/spring-boot-deployment.yaml#L30) and [deploy/auto-deploy.sh](https://github.com/Alphathur/spring-boot-k8s-app/blob/2c2f8d1749fc5dee046205dbc1ddd672122e1bd5/deploy/auto-deploy.sh?_pjax=%23js-repo-pjax-container%2C%20div%5Bitemtype%3D%22http%3A%2F%2Fschema.org%2FSoftwareSourceCode%22%5D%20main%2C%20%5Bdata-pjax-container%5D#L14). then cd to the project's root directory
 ### Create mysql secret to store database configuration
 Note: my root password for mysql is `mysql520` and database user to connect spring application is `root`, all values in the [deploy/mysql-secret.yaml](https://github.com/Alphathur/spring-boot-k8s-app/blob/master/deploy/mysql-secret.yaml) are required to be base64 encoded, you can print base64 encode values easily from the terminal
 ```bash
