@@ -4,6 +4,7 @@ Run spring boot application and mysql on kubernetes cluster
 ## Prerequisite
 - Docker and kubernetes cluster
 - Local registry ([setup guide](https://docs.docker.com/registry/deploying/))
+- Configuring insecure registry on each node ([see this](https://docs.docker.com/registry/insecure/#deploy-a-plain-http-registry))
 - kubectl
 - Jdk 1.8
 - Maven 3.x
