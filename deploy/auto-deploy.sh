@@ -11,7 +11,7 @@ if [ $# -eq 1 ]; then
 fi
 
 # build and push docker image
-image=localhost:5000/spring-boot-k8s-app:$tag
+image=192.168.6.128:5000/spring-boot-k8s-app:$tag
 imagename=spring-boot-k8s-app:$tag
 docker build -t $image .
 docker push $image
